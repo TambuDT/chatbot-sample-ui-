@@ -11,7 +11,7 @@ function App() {
 
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();//serve ad impedire che l'invio tramite submit faccia ricaricare la pagina, quindi al posto che usare il submit form da html lo fa tramite js 
     if (inputValue.trim() && !isReplying) {
       setIsReplying(true);
 
