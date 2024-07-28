@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+:root {
+  --background-color: #222831;
+  --reply-color: #31363f;
+  --query-color: #344955;
+  --bg-send-color: #1b4242;
+  --send-icon-color: #9ec8b9;
+  --white: #ffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-wrapper {
+  width: 600px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.reply-item {
+  background-color: var(--reply-color);
+  height: auto;
+  min-height: 50px;
+  max-height: 500px;
+  width: auto;
+  min-width: 100px;
+  max-width: 300px;
+  margin: 0;
+  padding: 15px;
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.query-item {
+  background-color: var(--query-color);
+  height: auto;
+  min-height: 50px;
+  max-height: 500px;
+  width: auto;
+  min-width: 100px;
+  max-width: 300px;
+  margin: 0;
+  padding: 15px;
+  align-self: flex-end;
+  border-radius: 10px 10px 0 10px;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  background-color: var(--bg-send-color);
+  border-radius: 10px;
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  background-color: transparent;
+  color: var(--white);
+}
+#chatbot-input::placeholder{
+  color: var(--send-icon-color);
+}
+
+#send-button {
+  padding: 10px 15px;
+  background-color: var(--send-icon-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+#send-button:hover {
+  background-color: var(--send-icon-color);
+  opacity: 0.8;
 }
