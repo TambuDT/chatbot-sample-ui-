@@ -12,7 +12,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();//serve ad impedire che l'invio tramite submit faccia ricaricare la pagina, quindi al posto che usare il submit form da html lo fa tramite js 
-    if (inputValue.trim() && !isReplying) {
+    if (inputValue.trim() && !isReplying) { 
+      /*
+      la variabile isReplying mi server per capire se il chatbot sta acnora rispondendo, se non sta rispondendo 
+      significa che ha finito e posso inviare una seconda richeista (fatto per evitare di spammare roba a caso) 
+      */
       setIsReplying(true);
 
       //aggiungi la domanda alla chat
