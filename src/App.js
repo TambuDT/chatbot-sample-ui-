@@ -43,8 +43,8 @@ function App() {
     <div className='main-wrapper'>
       <div className='chat-wrapper'>
         {messages.map((msg, index) => (
-          msg.type === 'query' ? (
-            <QueryComponent key={index} message={msg.text} /> //in base al tipo passato dalla funzione che si occupa di creare il messaggio o la risposta crea uno o l'laltro 
+          msg.type === 'query' ? ( //in base al tipo passato dalla funzione che si occupa di creare il messaggio o la risposta crea uno o l'laltro 
+            <QueryComponent key={index} message={msg.text} />  
           ) : (
             <ReplyComponent key={index} message={msg.text} />
           )
