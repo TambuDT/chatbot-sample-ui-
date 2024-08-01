@@ -35,34 +35,37 @@ body {
   overflow-y: auto;
 }
 
-.reply-item {
+.reply-item,
+.query-item {
   background-color: var(--reply-color);
-  height: auto;
   min-height: 50px;
-  max-height: 500px;
   width: auto;
-  min-width: 100px;
   max-width: 300px;
   margin: 0;
   padding: 15px;
+  border-radius: 10px;
+  color: white;
+  word-wrap: break-word; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  flex-shrink: 0; 
+}
+
+.reply-item {
+  background-color: var(--reply-color);
   align-self: flex-start;
   border-radius: 10px 10px 10px 0;
-  color: white;
 }
 
 .query-item {
   background-color: var(--query-color);
-  height: auto;
-  min-height: 50px;
-  max-height: 500px;
-  width: auto;
-  min-width: 100px;
-  max-width: 300px;
-  margin: 0;
-  padding: 15px;
   align-self: flex-end;
   border-radius: 10px 10px 0 10px;
-  color: white;
+}
+
+.message {
+  height: auto;
+  flex-grow: 1; 
 }
 
 .chatbot-input {
@@ -81,7 +84,8 @@ body {
   background-color: transparent;
   color: var(--white);
 }
-#chatbot-input::placeholder{
+
+#chatbot-input::placeholder {
   color: var(--send-icon-color);
 }
 

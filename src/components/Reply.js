@@ -4,7 +4,7 @@ import React from 'react'
 function ReplyComponent({message}) {
     return (
         <div className='reply-item'>
-            <p>{message}</p>
+            <p className='message'>{message}</p>
         </div>
     )
 }
